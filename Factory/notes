@@ -1,0 +1,26 @@
+https://refactoring.guru/design-patterns/factory-method
+
+Factory Method is a creational design pattern that provides an interface for creating objects in a superclass,
+but allows subclasses to alter the type of objects that will be created.
+
+
+
+The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with
+calls to a special factory method. Don’t worry: the objects are still created via the new operator, but it’s being
+called from within the factory method. Objects returned by a factory method are often referred to as products.
+
+
+At first glance, this change may look pointless: we just moved the constructor call from one
+part of the program to another. However, consider this: now you can override the factory
+method in a subclass and change the class of products being created by the method.
+
+
+Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects
+your code should work with.
+
+
+The Factory Method separates product construction code from the code that actually uses the product.
+Therefore it’s easier to extend the product construction code independently from the rest of the code.
+
+Use the Factory Method when you want to save system resources by reusing existing objects instead of
+rebuilding them each time.
